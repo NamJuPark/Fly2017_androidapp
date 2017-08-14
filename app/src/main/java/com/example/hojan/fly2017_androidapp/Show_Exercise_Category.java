@@ -30,11 +30,11 @@ public class Show_Exercise_Category extends AppCompatActivity {
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
                 if(i == 0){
                     //스트레칭
-                    Toast.makeText(getApplicationContext(),"화면전환 0_스트레칭",Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getApplicationContext(),"화면전환 0",Toast.LENGTH_SHORT).show();
                 }
                 else if(i == 1){
                     //팔
-                    Toast.makeText(getApplicationContext(),"화면전환 1_",Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getApplicationContext(),"화면전환 1",Toast.LENGTH_SHORT).show();
                 }
                 else if( i == 2){
                     //다리
@@ -50,7 +50,7 @@ public class Show_Exercise_Category extends AppCompatActivity {
                 }
                 else if(i == 5){
                     //복부
-                    Toast.makeText(getApplicationContext(),"화면전환 4",Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getApplicationContext(),"화면전환 5",Toast.LENGTH_SHORT).show();
                 }
             }
         });
