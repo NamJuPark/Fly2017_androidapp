@@ -1,5 +1,7 @@
 package com.example.hojan.fly2017_androidapp;
 
+import android.content.DialogInterface;
+import android.content.Intent;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -130,10 +132,16 @@ public class RegisterActivity extends AppCompatActivity {
                             if(success) {
                                 AlertDialog.Builder builder = new AlertDialog.Builder(RegisterActivity.this);
                                 dialog = builder.setMessage("회원 등록에 성공했습니다.")
-                                        .setPositiveButton("확인", null)
+                                        .setPositiveButton("확인", new DialogInterface.OnClickListener() {
+                                            @Override
+                                            public void onClick(DialogInterface dialog, int which) {
+                                                Intent intent = new Intent(RegisterActivity.this,LoginActivity.class);
+                                                RegisterActivity.this.startActivity(intent);
+                                                finish();
+                                            }
+                                        })
                                         .create();
                                 dialog.show();
-                                finish();
                             }
 
                             else {
