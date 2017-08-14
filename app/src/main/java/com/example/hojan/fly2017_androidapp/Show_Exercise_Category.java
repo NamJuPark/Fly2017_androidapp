@@ -36,7 +36,7 @@ public class Show_Exercise_Category extends AppCompatActivity {
                     //팔
                     Toast.makeText(getApplicationContext(),"화면전환 1",Toast.LENGTH_SHORT).show();
                 }
-                else if( i == 2){
+                else if(i == 2){
                     //다리
                     Toast.makeText(getApplicationContext(),"화면전환 2",Toast.LENGTH_SHORT).show();
                 }
