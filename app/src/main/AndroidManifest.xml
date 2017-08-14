@@ -30,5 +30,4 @@
         <activity android:name=".MainActivity"></activity>
         <activity android:name=".Show_Exercise_Category"></activity>
     </application>
-
 </manifest>
