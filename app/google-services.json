@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "158209318841",
+    "project_id": "galvanized-case-178211"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:158209318841:android:a61f4f2759fe672c",
+        "android_client_info": {
+          "package_name": "com.example.hojan.fly2017_androidapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "158209318841-iv14c10rtn4i2u7jkh0364l1h5khj81d.apps.googleusercontent.com",
+          "client_type": 3
+        },
+        {
+          "client_id": "158209318841-h084qc6o4cpvu6r2o9d346crshilde28.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.hojan.fly2017_androidapp",
+            "certificate_hash": "2a0be4bf41a116e09f059a3cf83b5a1df9d321f5"
+          }
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAh6EwK6jVsH66zPuTjaa0fJwz9LIphapk"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 1
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
