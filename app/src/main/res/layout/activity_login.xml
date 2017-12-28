@@ -54,7 +54,7 @@
             android:layout_gravity="center"
             android:paddingLeft="10dp"
             android:textSize="18dp"
-            android:id="@+id/loginView"
+            android:id="@+id/idText"
             android:drawableStart="@drawable/ic_account_circle_black_24dp"/>
 
         <EditText
@@ -62,7 +62,7 @@
             android:layout_height="50dp"
             android:background="@color/colorPrimaryDark"
             android:hint="비밀번호"
-            android:id="@+id/passwordView"
+            android:id="@+id/passwordText"
             android:textSize="18dp"
             android:inputType="textPassword"
             android:textColorHint="#ffffff"

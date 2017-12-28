@@ -5,7 +5,7 @@
     android:id="@+id/activity_show__exercise__category"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.namju_flytofit.Show_Exercise_Category">
+    tools:context="com.example.hojan.fly2017_androidapp.Show_Exercise_Category">
 
     <GridView
         android:layout_width="match_parent"

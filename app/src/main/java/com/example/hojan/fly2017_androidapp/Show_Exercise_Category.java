@@ -1,11 +1,14 @@
 package com.example.hojan.fly2017_androidapp;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.GridView;
-import android.widget.Toast;
 
 import java.util.ArrayList;
 
@@ -13,6 +16,7 @@ public class Show_Exercise_Category extends AppCompatActivity {
     GridView gridView;
     Adapter_Show_Exercise_Category adapter;
     ArrayList<item_Exercise_Category> data = new ArrayList<item_Exercise_Category>();
+    Intent intent;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -21,37 +25,63 @@ public class Show_Exercise_Category extends AppCompatActivity {
         moveToExercise();
     }
 
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.menu_move_other_acrivity,menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        Intent intent_menu;
+        if(item.getItemId() == R.id.menu_Home){
+            intent_menu = new Intent(this,Main_Calender.class);
+            startActivity(intent_menu);
+        }
+        else if(item.getItemId() == R.id.menu_Exercise){
+            intent_menu = new Intent(this, Show_Exercise_Category.class);
+            startActivity(intent_menu);
+        }
+        else if(item.getItemId() == R.id.menu_Community){
+            intent_menu = new Intent(this, Community.class);
+            startActivity(intent_menu);
+        }
+        return super.onOptionsItemSelected(item);
+    }
+
+
     private void moveToExercise() {
         //각 카테고리 클릭했을 때 화면 전환
-        //화면 전환은 다 같은 화면인데 해당 연결을 위해서
-        // 어댑터가 다르게 적용하도록 해야하나...?
+        intent = new Intent(this, Show_Exercise.class);
         gridView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
                 if(i == 0){
                     //스트레칭
-                    Toast.makeText(getApplicationContext(),"화면전환 0",Toast.LENGTH_SHORT).show();
+                    intent.putExtra("category", 0);
                 }
                 else if(i == 1){
                     //팔
-                    Toast.makeText(getApplicationContext(),"화면전환 1",Toast.LENGTH_SHORT).show();
+                    intent.putExtra("category", 1);
                 }
                 else if(i == 2){
                     //다리
-                    Toast.makeText(getApplicationContext(),"화면전환 2",Toast.LENGTH_SHORT).show();
+                    intent.putExtra("category", 2);
                 }
                 else if(i == 3){
                     //가슴
-                    Toast.makeText(getApplicationContext(),"화면전환 3",Toast.LENGTH_SHORT).show();
+                    intent.putExtra("category", 3);
                 }
                 else if(i == 4){
                     //어깨
-                    Toast.makeText(getApplicationContext(),"화면전환 4",Toast.LENGTH_SHORT).show();
+                    intent.putExtra("category", 4);
                 }
                 else if(i == 5){
                     //복부
-                    Toast.makeText(getApplicationContext(),"화면전환 5",Toast.LENGTH_SHORT).show();
+                    intent.putExtra("category", 5);
                 }
+                startActivity(intent);
             }
         });
     }

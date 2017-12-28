@@ -32,7 +32,6 @@ public class RegisterActivity extends AppCompatActivity {
         //findViewById를 이용해서 각각의 EditText 초기화
         final EditText idText = (EditText) findViewById(R.id.idText);
         final EditText passwordText = (EditText) findViewById(R.id.passwordText);
-        final EditText passwordText2 = (EditText) findViewById(R.id.passwordText2);
         final EditText nameText = (EditText) findViewById(R.id.nameText);
 
         final Button checkButton = (Button) findViewById(R.id.checkButton);
